@@ -1,0 +1,18 @@
+{
+    "name": "dedegunawan/document-converter-to-pdf",
+    "require": {
+        "phpoffice/phpword": "^0.16.0",
+        "dedegunawan/pdf-converter-client": "^0.0.1"
+    },
+    "authors": [
+        {
+            "name": "Dede Gunawan",
+            "email": "dede@unsil.ac.id"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DedeGunawan\\DocumentConverterToPdf\\" : "src/"
+        }
+    }
+}

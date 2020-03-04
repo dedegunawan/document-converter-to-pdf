@@ -8,10 +8,14 @@
 
 require_once '../vendor/autoload.php';
 
-$document_converter = new \DedeGunawan\DocumentConverterToPdf\DocumentConverter();
-$document_converter->setApiKey('your_api_key');
-$document_converter->setSecretKey('your_secret_key');
+try {
+    $document_converter = new \DedeGunawan\DocumentConverterToPdf\DocumentConverter();
+    $document_converter->setApiKey('api_key');
+    $document_converter->setSecretKey('secret_key');
 
-$document_converter->init('test.docx');
-$document_converter->setValue('nama_lengkap', 'Dede Gunawan');
-$document_converter->convert();
+    $document_converter->init('test.docx');
+    $document_converter->setValue('nama_lengkap', 'Dede Gunawan');
+    $document_converter->convert();
+} catch (Exception $exception) {
+    var_dump($exception);die();
+}

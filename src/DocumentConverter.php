@@ -143,7 +143,7 @@ class DocumentConverter
     {
         $api_key = $this->getApiKey();
         $secret_key = $this->getSecretKey();
-        if (!$api_key || !$secret_key) throw new Exception("Api Key / Secret Key untuk konversi PDF tidak ditemukan");
+        if (!$api_key || !$secret_key) throw new \Exception("Api Key / Secret Key untuk konversi PDF tidak ditemukan");
 
         \DedeGunawan\PdfConverterClient\Converter::setApiUrl("https://pdf-converter.dede-gunawan.web.id/");
         \DedeGunawan\PdfConverterClient\Converter::setApiKey($api_key);
